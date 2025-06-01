@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "75820ec8-75ed-462a-bf2f-59e81f0bda7a",
+		"name": "Llama4Con",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9815759"
+	},
+	"item": [
+		{
+			"name": "__/form/start",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/russellvancuren/Downloads/__Uploads/fw4.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/form/start",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"form",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/russellvancuren/Downloads/__Uploads/fw4.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/form/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"form",
+								"start"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 31 May 2025 22:48:43 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "70"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"session_id\": \"a7cd24a1-ae39-4a60-b6d8-d84d4523612b\",\n    \"field_count\": 17\n}"
+				},
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/russellvancuren/Downloads/__Uploads/fw4.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/form/start",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"form",
+								"start"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 01 Jun 2025 00:24:52 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "70"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"session_id\": \"6642866f-22e1-435f-961c-0d3e1b562160\",\n    \"field_count\": 17\n}"
+				}
+			]
+		},
+		{
+			"name": "__/form/respond",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"session_id\":\"6642866f-22e1-435f-961c-0d3e1b562160\",\n    \"user_input\":\"Russell L\",\n    \"last_response\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/form/respond",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"form",
+						"respond"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session_id\":\"a7cd24a1-ae39-4a60-b6d8-d84d4523612b\",\n    \"user_input\":\"Van Curen\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/form/respond",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"form",
+								"respond"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 31 May 2025 23:48:11 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "355"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"done\": false,\n    \"next\": true,\n    \"user_input\": \"Van Curen\",\n    \"field\": {\n        \"inputfield\": \"social_security_number\",\n        \"label\": \"(b) Social security number\",\n        \"bounding_box\": [\n            660,\n            130,\n            240,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"context_info\": \"numeric\",\n        \"inputfield_confidence\": 0.95\n    },\n    \"followup\": \"\",\n    \"error\": \"\"\n}"
+				},
+				{
+					"name": "response_not_valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session_id\":\"a7cd24a1-ae39-4a60-b6d8-d84d4523612b\",\n    \"user_input\":\"Van Curen\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/form/respond",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"form",
+								"respond"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 31 May 2025 23:52:02 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "431"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"done\": false,\n    \"next\": false,\n    \"user_input\": \"Van Curen\",\n    \"field\": {\n        \"inputfield\": \"social_security_number\",\n        \"label\": \"(b) Social security number\",\n        \"bounding_box\": [\n            660,\n            130,\n            240,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"context_info\": \"numeric\",\n        \"inputfield_confidence\": 0.95\n    },\n    \"followup\": \"Please enter your 9-digit social security number in the format XXX-XX-XXXX.\",\n    \"error\": \"\"\n}"
+				},
+				{
+					"name": "response_followup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session_id\":\"a7cd24a1-ae39-4a60-b6d8-d84d4523612b\",\n    \"user_input\":\"What is my social security number\",\n    \"last_response\": \"Please enter your 9-digit social security number in the format XXX-XX-XXXX.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/form/respond",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"form",
+								"respond"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 31 May 2025 23:56:01 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "575"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"done\": false,\n    \"next\": false,\n    \"user_input\": \"What is my social security number\",\n    \"field\": {\n        \"inputfield\": \"social_security_number\",\n        \"label\": \"(b) Social security number\",\n        \"bounding_box\": [\n            660,\n            130,\n            240,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"context_info\": \"numeric\",\n        \"inputfield_confidence\": 0.95\n    },\n    \"followup\": \"Your social security number is a 9-digit number issued to you by the Social Security Administration. It is typically found on your social security card. Please enter it in the format XXX-XX-XXXX.\",\n    \"error\": \"\"\n}"
+				},
+				{
+					"name": "response_valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session_id\":\"a7cd24a1-ae39-4a60-b6d8-d84d4523612b\",\n    \"user_input\":\"219-09-9999\",\n    \"last_response\": \"Your social security number is a 9-digit number issued to you by the Social Security Administration. It is typically found on your social security card. Please enter it in the format XXX-XX-XXXX.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/form/respond",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"form",
+								"respond"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 31 May 2025 23:58:08 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "298"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"done\": false,\n    \"next\": true,\n    \"user_input\": \"219-09-9999\",\n    \"field\": {\n        \"inputfield\": \"address\",\n        \"label\": \"Address\",\n        \"bounding_box\": [\n            170,\n            160,\n            490,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"inputfield_confidence\": 0.98\n    },\n    \"followup\": \"\",\n    \"error\": \"\"\n}"
+				},
+				{
+					"name": "response_valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session_id\":\"6642866f-22e1-435f-961c-0d3e1b562160\",\n    \"user_input\":\"Russell L\",\n    \"last_response\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/form/respond",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"form",
+								"respond"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 01 Jun 2025 00:27:03 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "300"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"done\": false,\n    \"next\": true,\n    \"user_input\": \"Russell L\",\n    \"field\": {\n        \"inputfield\": \"last_name\",\n        \"label\": \"Last name\",\n        \"bounding_box\": [\n            410,\n            130,\n            240,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"inputfield_confidence\": 0.98\n    },\n    \"followup\": \"\",\n    \"error\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "__/form/next",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/form/next?session_id=6642866f-22e1-435f-961c-0d3e1b562160",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"form",
+						"next"
+					],
+					"query": [
+						{
+							"key": "session_id",
+							"value": "6642866f-22e1-435f-961c-0d3e1b562160"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/form/next?session_id=a7cd24a1-ae39-4a60-b6d8-d84d4523612b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"form",
+								"next"
+							],
+							"query": [
+								{
+									"key": "session_id",
+									"value": "a7cd24a1-ae39-4a60-b6d8-d84d4523612b"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 31 May 2025 23:48:24 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "327"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": {\n        \"inputfield\": \"social_security_number\",\n        \"label\": \"(b) Social security number\",\n        \"bounding_box\": [\n            660,\n            130,\n            240,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"context_info\": \"numeric\",\n        \"inputfield_confidence\": 0.95\n    },\n    \"prompt\": \"What's your social security number?\"\n}"
+				},
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/form/next?session_id=6642866f-22e1-435f-961c-0d3e1b562160",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"form",
+								"next"
+							],
+							"query": [
+								{
+									"key": "session_id",
+									"value": "6642866f-22e1-435f-961c-0d3e1b562160"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 01 Jun 2025 00:26:15 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "323"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field\": {\n        \"inputfield\": \"first_name_and_middle_initial\",\n        \"label\": \"(a) First name and middle initial\",\n        \"bounding_box\": [\n            170,\n            130,\n            240,\n            20\n        ],\n        \"context\": \"Step 1: Enter Personal Information\",\n        \"page\": 1,\n        \"document_name\": \"Form W-4\",\n        \"inputfield_type\": \"text\",\n        \"inputfield_confidence\": 0.98\n    },\n    \"prompt\": \"What's your first name and middle initial?\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8000",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "host",
+			"value": "http://3.82.162.7:8000",
+			"type": "string"
+		}
+	]
+}
